@@ -170,6 +170,7 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
         _providedAccessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL,
       accessibilityRole:
         _providedAccessibilityRole = DEFAULT_ACCESSIBILITY_ROLE,
+      accessibilityAdditionalProps,
     } = props;
     //#endregion
 
@@ -1668,6 +1669,7 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
                   accessible={_providedAccessible ?? undefined}
                   accessibilityRole={_providedAccessibilityRole ?? undefined}
                   accessibilityLabel={_providedAccessibilityLabel ?? undefined}
+                  {...accessibilityAdditionalProps}
                 >
                   <BottomSheetDraggableView
                     key="BottomSheetRootDraggableView"
